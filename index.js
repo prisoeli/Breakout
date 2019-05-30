@@ -37,7 +37,7 @@ this.load.image("star","assets/star.png")
 function create()
 {
     this.physics.world.setBoundsCollision(true, true, true, false);
-    // this.add.image(400,300,"sky").setScale(5);
+    this.add.image(400,300,"sky").setScale(1);
     
     // stars
     stars = this.physics.add.staticGroup();
@@ -45,10 +45,10 @@ function create()
     setofStars();
     
     function setofStars(){
-        for(let row = 0; row< 10; row++){
+        for(let row = 0; row< 5; row++){
 
-            for(let col = 0; col<34; col++){
-                stars.create(19 + col*23,20+ row*23, "star");
+            for(let col = 0; col<15; col++){
+                stars.create(50 + col*50,40+ row*50, "star");
             }
         }
     }
